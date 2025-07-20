@@ -11,12 +11,12 @@ const __dirname = dirname(__filename);
 config()
 
 app.set("view engine", "ejs")
-app.use(express.static(path.join(__dirname, "Public")));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (_, res)=>{
     res.render("index")
 })
 
 server.listen(process.env.PORT, ()=>{
-    console.log("Server Started on port 8080!!");
+    console.log(`Server started on port ${process.env.PORT}`);
 })
